@@ -9,7 +9,7 @@ see the role README).
 ansible-playbook -i <inventory> -k --ask-vault-password site.yml -l <device>
 ```
 
-`ansible.cfg` sets the roles path, log path and paramiko options for RouterOS connections.
+Uses the `ansible.cfg` of the nsbldr container (paramiko `look_for_keys = False` is required for RouterOS).
 
 ## License
 
