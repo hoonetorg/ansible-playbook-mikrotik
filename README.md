@@ -9,7 +9,9 @@ see the role README).
 ansible-playbook -i <inventory> -k --ask-vault-password site.yml -l <device>
 ```
 
-Uses the `ansible.cfg` of the nsbldr container (paramiko `look_for_keys = False` is required for RouterOS).
+Uses the `ansible.cfg` of the nsbldr container: `network_cli` connects with libssh (ansible-core 2.21 has no
+paramiko connection anymore), `[libssh_connection] look_for_keys = False` is required for RouterOS
+(password login without trying keys).
 
 ## License
 
